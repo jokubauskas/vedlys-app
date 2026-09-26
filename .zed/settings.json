@@ -1,0 +1,61 @@
+// Requires the Oxc extension: `zed: extensions`, search for "Oxc".
+{
+  "languages": {
+    "JavaScript": {
+      "language_servers": ["!eslint", "..."],
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [
+        { "code_action": "source.fixAll.oxc" },
+        { "language_server": { "name": "oxfmt" } }
+      ]
+    },
+    "JSX": {
+      "language_servers": ["!eslint", "..."],
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [
+        { "code_action": "source.fixAll.oxc" },
+        { "language_server": { "name": "oxfmt" } }
+      ]
+    },
+    "TypeScript": {
+      "language_servers": ["!eslint", "..."],
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [
+        { "code_action": "source.fixAll.oxc" },
+        { "language_server": { "name": "oxfmt" } }
+      ]
+    },
+    "TSX": {
+      "language_servers": ["!eslint", "..."],
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [
+        { "code_action": "source.fixAll.oxc" },
+        { "language_server": { "name": "oxfmt" } }
+      ]
+    },
+    "JSON": {
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+    },
+    "JSONC": {
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+    },
+    "Markdown": {
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+    },
+    "YAML": {
+      "format_on_save": "on",
+      "prettier": { "allowed": false },
+      "formatter": [{ "language_server": { "name": "oxfmt" } }]
+    }
+  }
+}
