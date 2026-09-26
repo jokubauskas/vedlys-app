@@ -1,7 +1,19 @@
 {
   "name": "vedlys-app",
   "version": "1.0.0",
+  "private": true,
   "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "native:prebuild": "expo prebuild --clean",
+    "lint": "oxlint --deny-warnings",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check"
+  },
   "dependencies": {
     "expo": "~57.0.25",
     "expo-status-bar": "~57.0.1",
@@ -10,17 +22,9 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
-    "eslint": "^9.0.0",
-    "eslint-config-expo": "~57.0.2",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "oxfmt": "^0.70.0",
+    "oxlint": "^1.85.0",
     "typescript": "~6.0.3"
-  },
-  "scripts": {
-    "start": "expo start",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
-    "web": "expo start --web",
-    "native:prebuild": "expo prebuild --clean",
-    "lint": "expo lint"
-  },
-  "private": true
+  }
 }

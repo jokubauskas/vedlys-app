@@ -1,0 +1,53 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "import", "unicorn", "oxc"],
+  // React Compiler rules from eslint-plugin-react-hooks. Aliased because oxlint's built-in
+  // react plugin already provides rules-of-hooks and exhaustive-deps under react/*.
+  "jsPlugins": [{ "name": "react-hooks-js", "specifier": "eslint-plugin-react-hooks" }],
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "eqeqeq": ["warn", "smart"],
+    "no-var": "error",
+    "no-extend-native": "error",
+    "no-useless-constructor": "warn",
+    "no-unused-vars": [
+      "warn",
+      { "args": "none", "ignoreRestSiblings": true, "caughtErrorsIgnorePattern": "^_" }
+    ],
+    "import/first": "warn",
+    "import/no-duplicates": "warn",
+    "react/rules-of-hooks": "error",
+    "react/exhaustive-deps": "error",
+    "react/no-unescaped-entities": "error",
+    "react/no-unknown-property": "error",
+    "react/no-this-in-sfc": "error",
+    "react-hooks-js/static-components": "error",
+    "react-hooks-js/use-memo": "error",
+    "react-hooks-js/void-use-memo": "error",
+    "react-hooks-js/preserve-manual-memoization": "error",
+    "react-hooks-js/incompatible-library": "error",
+    "react-hooks-js/immutability": "error",
+    "react-hooks-js/globals": "error",
+    "react-hooks-js/refs": "error",
+    "react-hooks-js/set-state-in-effect": "error",
+    "react-hooks-js/error-boundaries": "error",
+    "react-hooks-js/purity": "error",
+    "react-hooks-js/set-state-in-render": "error",
+    "react-hooks-js/unsupported-syntax": "error",
+    "react-hooks-js/config": "error",
+    "react-hooks-js/gating": "error",
+    "typescript/array-type": ["warn", { "default": "array" }],
+    "typescript/consistent-type-assertions": ["warn", { "assertionStyle": "as" }],
+    "typescript/no-empty-object-type": "warn",
+    "typescript/no-require-imports": [
+      "error",
+      {
+        "allow": [
+          "\\.(aac|aiff|avif|bmp|caf|db|gif|heic|html|jpeg|jpg|json|m4a|m4v|mov|mp3|mp4|mpeg|mpg|otf|pdf|png|psd|svg|ttf|wav|webm|webp|xml|yaml|yml|zip)$"
+        ]
+      }
+    ]
+  }
+}
